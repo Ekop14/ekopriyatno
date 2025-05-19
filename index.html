@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checklist Harian Forklift</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 480px; margin: 20px auto; padding: 10px; }
+        h2 { text-align: center; }
+        label { font-weight: bold; }
+        select, input[type=date], textarea { width: 100%; padding: 8px; margin: 6px 0 12px 0; box-sizing: border-box; }
+        input[type=submit] { background-color: #28a745; color: white; padding: 10px; border: none; width: 100%; font-size: 16px; cursor: pointer; }
+        input[type=submit]:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <h2>Checklist Harian Forklift</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScps4vCjJUixp6PskpS77OY4rYKzDmJ8kRlTwTfpEyhUKzYCw/formResponse" method="POST" target="hidden_iframe" onsubmit="alert('Checklist berhasil dikirim!');">
+        <label for="date">Tanggal:</label>
+        <input type="date" id="date" name="entry.1380783374" required />
+
+        <label for="oli">Kondisi Oli:</label>
+        <select id="oli" name="entry.1639451960" required>
+            <option value="">--Pilih--</option>
+            <option value="Baik">Baik</option>
+            <option value="Rusak">Rusak</option>
+        </select>
+
+        <label for="rem">Kondisi Rem:</label>
+        <select id="rem" name="entry.767813747" required>
+            <option value="">--Pilih--</option>
+            <option value="Baik">Baik</option>
+            <option value="Rusak">Rusak</option>
+        </select>
+
+        <label for="lampu">Kondisi Lampu:</label>
+        <select id="lampu" name="entry.1543425478" required>
+            <option value="">--Pilih--</option>
+            <option value="Baik">Baik</option>
+            <option value="Rusak">Rusak</option>
+        </select>
+
+        <label for="ban">Kondisi Ban:</label>
+        <select id="ban" name="entry.1950711523" required>
+            <option value="">--Pilih--</option>
+            <option value="Baik">Baik</option>
+            <option value="Rusak">Rusak</option>
+        </select>
+
+        <label for="catatan">Catatan Tambahan:</label>
+        <textarea id="catatan" name="entry.2009118476" rows="4"></textarea>
+
+        <input type="submit" value="Kirim Checklist" />
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+</body>
+</html>
