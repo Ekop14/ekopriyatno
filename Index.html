@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login UI</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+<div class="login-page">
+<div class="login-box">
+<div class="bubble bubble-demo">For Demo Page</div>
+<div class="bubble bubble-info">username(eko)</div>
+<div class="bubble bubble-info2">Password (12345)</div>
+<div class="avatar-wrapper">
+    <lottie-player
+        class="avatar"
+        src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay>
+    </lottie-player>
+</div>
+
+    <h2>Login</h2>
+    <form>
+        <div class="input-box">
+            <i class="fa fa-user"></i>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+
+        <div class="input-box">
+            <i class="fa fa-lock"></i>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <div class="links">
+        <a href="#">Make New</a>
+        &nbsp;&nbsp;<a href="#">Forgot Password?</a>
+    </div>
+
+</div>
+</div>
+<script src="script.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>

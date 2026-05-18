@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Eko">
+     <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tempat Belajar Coding</title>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-left">
+
+            <img src="ezgif.com-animated-gif-maker.gif" alt="Logo" width="200">
+
+            <div class="typing-container">
+                <span id="typing"></span>
+                <span class="cursor">|</span>
+            </div>
+
+        </div>
+            <!-- FAB CONTAINER -->
+            <div class="fab-container">
+            <!-- HOME -->
+            <a href="https://google.com" class="fab" target="_blank">
+                <i class="fa-solid fa-house"></i>
+                <span>Google</span>
+                </a>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/6285772283996" class="fab" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+                </a>
+
+            <!-- GITHUB -->
+            <a href="https://ekopriyatno.xo.je/login1.html" class="fab" target="_blank">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Project</span>
+                </a>
+            <!-- logout -->
+            <a href="Index.html" class="fab" target="_blank">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+                </a>
+            
+</div>
+          
+    </header>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <button class="btn-3d" onclick="showPage('home'); setActiveMenu(this)">Home🏠</button>
+            <button class="btn-3d" onclick="showPage('Guest'); setActiveMenu(this)">Guest📝</button>
+            <button class="btn-3d" onclick="showPage('project'); setActiveMenu(this)">Project ⚙</button>
+            <button class="btn-3d" onclick="showPage('about'); setActiveMenu(this)">About ℹ</button>
+            <button class="btn-3d" onclick="showPage('Sample'); setActiveMenu(this)">Sample🧩</button>
+            <button id="darkModeBtn" class="dark-btn">
+                <span> Dark mode</span>
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            
+
+        </aside>
+
+        <!-- CONTENT -->
+        <section class="content">
+
+            <!-- HOME -->
+            <div class="page active" id="home">
+
+                <div class="card">
+
+                    <div class="about-card">
+
+                        <div class="about-text">
+
+                            <p>I am Eko Priyatno and I am now looking for jobs as front end developer</p>
+                            &nbsp;<p>I am highly interested in becoming a Front-End Developer because I enjoy creating visual and interactive experiences on the web.</p>
+                            <p>From the moment I started learning how websites are built, I became fascinated by how HTML, CSS, and JavaScript work together to form something that users can see and interact with.</p>
+                            <p>I find satisfaction in turning ideas and designs into real, functional interfaces that are both attractive and easy to use.</p> 
+                            <p>My passion for front-end development continues to grow as I explore modern tools and frameworks.</p>
+                            <p>have been practicing building responsive layouts, working with basic JavaScript functionality, and improving my understanding of UI and UX principles.</p>
+                            <p>I enjoy solving problems related to layout, design consistency, and user experience because it challenges me to think creatively and logically at the same time.</p>
+                            <p>I am fully aware that becoming a skilled Front-End Developer requires dedication, discipline, and continuous learning.</p>
+                            <p>Therefore, I am ready to work hard, practice consistently, and improve my skills every day.</p>
+                            <p>I am also willing to face challenges and learn from mistakes, as I believe they are an important part of the growth process.</p>
+                            <p> in addition, I am motivated to work in a team environment where I can collaborate with others, share ideas, and contribute to building meaningful digital products. </p>
+                            <p>I am committed to developing myself into a reliable and professional Front-End Developer who can deliver high-quality work and adapt to modern web technologies.</p>
+
+                        </div>
+
+                        <div class="about-photo">
+                            <img src="ekofoto.jpg" alt="Profile Photo">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- GUEST -->
+            <div class="page" id="Guest">
+
+                <div class="card">
+
+                    <h2>Guest Book</h2>
+
+                    <form id="guestForm">
+
+                        <input
+                            type="text"
+                            id="guestName"
+                            placeholder="Your Name"
+                            required
+                        >
+
+                        <br><br>
+
+                        <textarea
+                            id="guestMessage"
+                            placeholder="Your Message"
+                            required
+                        ></textarea>
+
+                        <br><br>
+
+                        <button class="guest-button">
+                            <p>Submit</p>
+                        </button>
+
+                    </form>
+
+                    <hr>
+
+                    <div id="guestList"></div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT -->
+            <div class="page" id="project">
+
+                <div class="card">
+
+                        <P>&nbsp;&nbsp;&nbsp;&nbsp;I created a <a href="https://ekopriyatno.xo.je/login1.html">checklist</a> web tool called MHE Checklist Web to help improve organization, accuracy, and efficiency in completing structured tasks, especially in environments that require careful monitoring and documentation. The background of this project comes from the common challenge people face when dealing with complex procedures that involve many steps, where it is easy to miss important details or lose track of progress. In many academic, workplace, and operational settings, tasks are often repeated regularly, and without a clear system, errors and inconsistencies can occur. I developed this web-based checklist system to provide a simple but effective solution that allows users to follow structured steps in a more reliable way, reducing the chance of oversight while improving productivity.</P>
+                        <br>
+                        <P>easy to miss important details or lose track of progress. In many academic, workplace, and operational settings, tasks are often repeated regularly, and without a clear system, errors and inconsistencies can occur. I developed this web-based checklist system to provide a simple but effective solution that allows users to follow structured steps in a more reliable way, reducing the chance of oversight while improving productivity.</P>
+                        <br> 
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;The idea behind the MHE Checklist Web was inspired by the need for a digital alternative to traditional paper checklists. Paper-based systems are often inconvenient because they can be lost, damaged, or difficult to update. In contrast, a web-based checklist offers flexibility, accessibility, and real-time updates. Users can access it from different devices, making it more practical for both individual and team use. The system is designed to be user-friendly so that anyone, regardless of technical background, can easily understand and use it without extensive training. This makes it suitable for various contexts such as education, administrative work, project management, and even personal task tracking.</p>
+                        <P>&nbsp;&nbsp;&nbsp;&nbsp;One of the main benefits of the MHE Checklist Web is its ability to improve task accuracy. By breaking down complex processes into smaller, manageable steps, users are less likely to forget important actions. Each completed step can be clearly marked, providing a sense of progress and reducing cognitive load. This is especially useful in environments where precision is important, such as laboratory work, maintenance procedures, or quality control processes. Additionally, the checklist system encourages consistency, ensuring that tasks are performed in the same structured manner every time.</P>
+                        <br>
+                        <P>Another important benefit is increased efficiency. Users can save time by following a predefined structure rather than trying to remember every step from scratch. This also reduces the need for repeated corrections or revisions caused by missed steps. In team environments, the web checklist improves communication and coordination because all members can follow the same structured workflow. This helps reduce misunderstandings and ensures that everyone is aligned with the task requirements.</P>
+                        <P>&nbsp;&nbsp;&nbsp;&nbsp;The MHE Checklist Web also supports better accountability. Since tasks are clearly documented and tracked, it becomes easier to identify which steps have been completed and who is responsible for each part. This transparency is valuable in both educational and professional settings, where performance tracking and responsibility are important. It also helps supervisors or team leaders monitor progress without needing constant manual updates.</P>
+                        <P>Overall, the MHE Checklist Web was developed to provide a practical, accessible, and efficient tool for managing structured tasks. Its background is rooted in the need for better organization and reliability in everyday processes, while its benefits extend to improved accuracy, efficiency, consistency, and accountability. By transforming traditional checklist methods into a digital format, this tool aims to support users in working more effectively and confidently in a wide range of situations.</P>
+
+
+                </div>
+
+            </div>
+
+            <!-- ABOUT -->
+            <div class="page" id="about">
+
+                <div class="card">
+
+                    <p>Dear Hiring Manager,</p>
+                                        <p>I am writing to express my interest in the Frontend Developer position at your company. With a strong passion for building responsive, user-friendly web interfaces and a solid foundation in modern frontend technologies, I am excited about the opportunity to contribute to your team.
+                    I have experience working with HTML, CSS, and JavaScript, along with modern frameworks such as React.js (or Vue.js). I am also familiar with consuming RESTful APIs, using version control systems like Git, and applying UI/UX best practices to create engaging user experiences.
+                    I am a detail-oriented and proactive individual who enjoys solving problems and collaborating with cross-functional teams. I am also committed to continuous learning and staying up to date with the latest trends in frontend development.
+                    I have attached my resume and portfolio for your review. I would welcome the opportunity to discuss how my skills and experience align with your needs.
+                    Thank you for your time and consideration. I look forward to hearing from you.</p>
+
+                    <p>Sincerely,</p>
+                        <br>
+                        <br>
+                    <p>Eko Priyatno</p>
+                    
+                    📄      <a href="Eko Priyatno.doc" download class="btn-cv">
+                    <span class="icon">Download My Cv</span>
+                    </a>
+                    <p>📞 +62 8577-228-3996</p>
+                    <p>📧 ekopriyatno.ppic@gmail.com</p>
+                        🌐 <a href="https://ekopriyatno.xo.je/index.html">
+                    https://ekopriyatno.xo.je
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- SAMPLE -->
+            <div class="page" id="Sample">
+
+                <div class="clean-card">
+
+                    <h2>Cleanliness Report</h2>
+
+                    <form id="cleanForm">
+
+                        <label>Name</label>
+
+                        <input type="text" id="name" placeholder="Enter your name" required>
+
+                        <label>Location</label>
+
+                        <input type="text" id="location" placeholder="Room / Area" required>
+
+                        <label>Condition</label>
+
+                        <input type="text" id="condition" placeholder="Clean / Dirty / Needs Attention" required>
+
+                        <button type="submit">Submit Report</button>
+
+                    </form>
+
+                    <div id="cleanList"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    <!-- END MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>© 2026 Eko Priyatno</p>
+
+    </footer>
+
+</div>
+<!-- END WRAPPER -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

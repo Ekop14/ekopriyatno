@@ -1,0 +1,798 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY (FIXED)
+========================= */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #32373d;
+    margin:0;
+    min-height:100vh;
+    position:relative;
+    padding-bottom:60px;
+    
+}
+
+/* =========================
+   LOGIN LAYOUT (KHUSUS LOGIN)
+========================= */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7a98b7, #121313);
+}
+
+/* =========================
+   LOGIN BOX
+========================= */
+.login-box {
+    width: 340px;
+    padding: 35px;
+    background: rgba(127, 125, 210, 0.15);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+    color: white;
+    animation: fadeUp 0.7s ease;
+}
+
+/* INPUT LOGIN */
+.input-box {
+    display: flex;
+    align-items: center;
+    background: rgba(214, 212, 217, 0.847);
+    border-radius: 12px;
+    border: 1px solid rgba(241, 235, 235, 0.849);
+    padding: 8px 10px;
+    margin-bottom: 12px;
+}
+
+.input-box i {
+    margin-right: 10px;
+    color: #e0d8d8;
+    width: 20px;
+    text-align: center;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 15xp;
+    background: transparent;
+    color: white;
+}
+
+/* =========================
+   WRAPPER DASHBOARD
+========================= */
+.wrapper{
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    min-height:100vh;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #9ebbd4, #00f2fe);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    inset 0 2px 5px rgba(255,255,255,0.2), /* cahaya atas */
+    inset 0 -3px 8px rgba(0,0,0,0.3); /* bayangan dalam */
+  /* EFEK PERSPEKTIF 3D */
+     transform: perspective(1000px) rotateX(5deg);
+  /* ANIMASI HALUS */
+    transition: 0.4s ease;
+    box-shadow: 0 6px 0 #3730a3, 0 10px 20px rgba(0,0,0,.35);
+    position: sticky;
+    top:0;
+    z-index:1000;
+}
+.header-left{
+display: flex;
+align-items: center;
+gap: 12px;
+border-radius: 15px;
+overflow: hidden;
+}
+
+
+.header-left img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.header h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+ 
+/* =========================
+   MAIN LAYOUT
+========================= */
+.main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 220px;
+    height: auto;
+    background: #1e293b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* BUTTON SIDEBAR */
+.sidebar button {
+    background: transparent;
+    color: #d1d5db;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.sidebar button:hover {
+    background: #334155;
+    color: white;
+}
+
+.sidebar button.active-menu {
+    background: #4facfe;
+    color: white;
+}
+
+
+/* =========================
+   CONTENT AREA
+========================= */
+.content {
+    flex: 1;
+    padding: 40px;
+   overflow: auto;
+}
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+.page {
+    display: none;
+    width: 100%;
+   
+}
+
+.page.active {
+    display: block;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;  
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: block;
+    transition: 0.3s ease;
+    
+}
+.container{
+    width:min(1100px, 90%);
+    margin:auto;
+}
+/* =========================
+   INPUT GLOBAL (DASHBOARD)
+========================= */
+input, textarea {
+    max-width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79,172,254,0.15);
+}
+
+/* =========================
+   BUTTON GLOBAL
+========================= */
+button {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #4facfe;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 40px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1e88e5;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   CLEAN ITEM
+========================= */
+.clean-item {
+    background: #f9fafc;
+    border-left: 4px solid #4facfe;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* =========================
+   GUEST CARD
+========================= */
+.guest-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+
+}
+
+.guest-item:hover {
+    transform: translateY(-2px);
+}
+
+.guest-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.guest-content {
+    flex: 1;
+}
+
+.guest-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.guest-button{
+    color: #1c1b1c;
+    width: 50%;
+    background-color: #2cabeb;
+    justify-content: center;
+    align-items: center;
+}
+.guest-message {
+    color: #555;
+    font-size: 14px;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.pk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    width:100%;
+    height:60px;
+    background:#111;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   3D BUTTON
+========================= */
+.btn-3d {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #454546, #b6b5c5);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #3730a3, 0 10px 20px rgba(0,0,0,.35);
+    transition: all .15s ease;
+     /* EFEK EMBOSSED */
+    box-shadow:
+        0 6px 0 #2c2d8f,
+        0 10px 20px rgba(0,0,0,0.35),
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        inset 0 -3px 5px rgba(0,0,0,0.2);
+
+    transition: all 0.15s ease;
+}
+
+.btn-3d:hover {
+    transform: translateY(-2px);
+     box-shadow:
+        0 8px 0 #2c2d8f,
+        0 14px 24px rgba(0,0,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        inset 0 -3px 5px rgba(0,0,0,0.2);
+}
+
+.btn-3d:active {
+    transform: translateY(4px);
+     box-shadow:
+        0 2px 0 #2c2d8f,
+        0 5px 10px rgba(0,0,0,0.25),
+        inset 0 2px 4px rgba(255,255,255,0.2),
+        inset 0 -2px 4px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   CV BUTTON
+========================= */
+.btn-cv {
+    background: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-cv:hover {
+    transform: scale(1.05);
+    background: #0056b3;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .pk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .pk-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.clean-card form {
+    display:contents;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.clean-card{
+    width: 480px;
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.clean-card:hover{
+transform: translateY(-5px);
+}
+
+.clean-card label {
+    display: block;
+    margin-bottom: 4px;
+   
+}
+
+.clean-card input {
+    width: 80%;
+    box-sizing: border-box;
+}
+.clean-card button{
+    width: 60%;       /* biar tidak full */
+    padding: 10px 20px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.card:hover{
+    transform:translateY(-5px);
+}
+.card-img{
+    width: 100%;
+    max-width: 200px;
+    height:auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+.gambar-project{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}  
+    
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b1c1f;
+}
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* avatar */
+.avatar-wrapper {
+    margin-bottom: -20px;
+    z-index: 2;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+}
+
+/* papan login */
+.board {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 16px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    position: relative;
+    z-index: 1;
+}
+
+/* efek sedikit naik biar “nempel ke avatar” */
+.board {
+    transform: translateY(-10px);
+}
+.bubble-demo {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bubble-info {
+    top: 80px;
+    left: 10px;
+}
+.bubble-info2 {
+    top: 80px;
+    right: 10px;
+} 
+.about-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    gap: 20px;
+}
+.about-photo {
+    flex-shrink: 0;
+}
+.about-photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* ini bikin bulat */
+    object-fit: cover;
+    border: 4px solid #4facfe; /* garis pinggir */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.about-text {
+    flex: 1;
+    line-height: 1.6;
+}
+html,body{
+    height: 100%;
+    margin:0;
+}
+.bubble-demo{
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+/* Container text */
+.typing-container{
+  font-size:50px;
+  font-weight:bold;
+
+  color:#3b82f6;
+
+  letter-spacing:2px;
+}
+
+/* Cursor */
+.cursor{
+  display:inline-block;
+
+  color:rgb(118, 168, 214);
+
+  animation:blink 0.8s infinite;
+}
+
+/* Animasi cursor */
+@keyframes blink{
+  50%{
+    opacity:0;
+  }
+}
+/* FAB */
+/* CONTAINER */
+.fab-container{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    display:flex;
+    gap:15px;
+    z-index:999;
+}
+
+/* FAB BUTTON */
+.fab{
+
+    width:50px;
+    height:50px;
+    background:#6eaad6;
+    color:white;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    overflow:hidden;
+    text-decoration:none; 
+    transition:all 0.3s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    padding:0 22px 0 0;
+}
+
+/* ICON */
+.fab i{
+
+    width:50px;
+    min-width:50px;
+    text-align:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+/* TEXT */
+.fab span{
+    opacity:0;
+    white-space:nowrap;
+    font-weight:600;
+    transform:translateX(15px);
+    transition:0.3s;
+}
+
+/* HOVER */
+.fab:hover{
+    width:190px;
+    background:#2563eb;
+}
+
+/* TEXT SHOW */
+.fab:hover span{
+    opacity:1;
+    transform:translateX(0);
+}
+/* DARK MODE BUTTON */
+.dark-btn{
+     display:flex;
+    align-items:center;
+    gap:8px;
+    width:auto;
+    padding:8px 12px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+
+/* DARK MODE */
+body.dark{
+    background:#0f172a;
+    color:white;
+}
+
+/* CARD DARK */
+body.dark .card,
+body.dark .clean-card,
+body.dark .about-card{
+
+    background:#1e293b;
+
+    color:white;
+}
+
+/* SIDEBAR DARK */
+body.dark .sidebar{
+
+    background:#0f172a;
+}
+
+/* INPUT DARK */
+body.dark input,
+body.dark textarea{
+
+    background:#1e293b;
+
+    color:white;
+
+    border:1px solid #334155;
+}
+
+/* HEADER DARK */
+body.dark .header{
+
+    background:linear-gradient(135deg,#111827,#1e293b);
+}
+.dark-btn i{
+    font-size:20px;
+    min-width:auto;
+    width:auto;
+}
+.dark-btn span{
+    opacity:1;
+    white-space:nowrap;
+    font-weight:600;
+    transform:translateX(0);
+    transition:0.3s;
+}
+.dark-btn:hover span{
+    opacity:1;
+    transform:translateX(0);
+    font-size: 14px;
+}
+.dark-btn:hover{
+
+    width:90px;
+    background:#2563eb;
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.1);
+@media (max-width: 768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .container{
+        flex-direction:column;
+        width:100%;
+        padding:10px;
+    }
+
+    .sidebar{
+        width:100%;
+        border-radius:20px;
+        margin-bottom:15px;
+    }
+
+    .content{
+        width:100%;
+        padding:15px;
+    }
+
+    .profile-card{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .profile-card img{
+        width:120px;
+        height:120px;
+    }
+
+    .menu{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .menu button{
+        width:100%;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.6;
+    }
+}
