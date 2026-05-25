@@ -195,3 +195,35 @@ if (btn) {
     });
 
 }
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("PUBLIC_KEY_KAMU");
+
+document.getElementById("cleanForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let location = document.getElementById("location").value;
+    let condition = document.getElementById("condition").value;
+
+    let templateParams = {
+        from_name: name,
+        location: location,
+        condition: condition
+    };
+
+    emailjs.send(
+        "SERVICE_ID_KAMU",
+        "TEMPLATE_ID_KAMU",
+        templateParams
+    )
+    .then(function(response) {
+        alert("Report berhasil dikirim ke Gmail!");
+        document.getElementById("cleanForm").reset();
+    })
+    .catch(function(error) {
+        alert("Gagal kirim email");
+        console.log(error);
+    });
+});
