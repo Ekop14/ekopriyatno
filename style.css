@@ -142,6 +142,12 @@ overflow: hidden;
     overflow: hidden;
 }
 
+@media (max-width:768px){
+    .main{
+        flex-direction: column;
+    }
+}
+
 /* =========================
    SIDEBAR
 ========================= */
@@ -826,6 +832,73 @@ background:rgba(255,255,255,0.1);
 }
 
 @media (max-width:768px){
+    .input-row{
+        grid-template-columns:1fr;
+    }
+
+    .hire-form button{
+        width:100%;
+    }
+}
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .main{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-width:100%;
+        padding:15px;
+    }
+
+    .content{
+        width:100%;
+        padding:15px;
+    }
+
+    .header{
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+    }
+
+    .header-left{
+        flex-direction:column;
+    }
+
+    .header-left img{
+        width:100px;
+        height:100px;
+    }
+
+    .typing-container{
+        font-size:24px;
+    }
+
+    .fab-container{
+        position:static;
+        justify-content:center;
+        flex-wrap:wrap;
+        margin-top:15px;
+    }
+
+    .card{
+        width:100%;
+        margin:10px 0;
+        padding:15px;
+    }
+
+    .about-card{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
+
     .input-row{
         grid-template-columns:1fr;
     }
