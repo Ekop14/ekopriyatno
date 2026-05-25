@@ -195,3 +195,36 @@ if (btn) {
     });
 
 }
+emailjs.init("5-FkL2wTZQYBB81F8");
+
+const hireForm = document.getElementById("hireForm");
+const hireStatus = document.getElementById("hireStatus");
+
+hireForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+        from_name: document.getElementById("hireName").value,
+        from_email: document.getElementById("hireEmail").value,
+        subject: document.getElementById("hireSubject").value,
+        message: document.getElementById("hireMessage").value
+    };
+
+    hireStatus.innerHTML = "Sending...";
+
+    emailjs.send(
+        "service_1u898cf",
+        "template_71s2ql7",
+        templateParams
+    )
+    .then(() => {
+        hireStatus.innerHTML = "✅ Message sent!";
+        hireStatus.style.color = "green";
+        hireForm.reset();
+    })
+    .catch((error) => {
+        console.log(error);
+        hireStatus.innerHTML = "❌ Failed to send.";
+        hireStatus.style.color = "red";
+    });
+});
