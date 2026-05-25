@@ -71,6 +71,7 @@
             <button class="btn-3d" onclick="showPage('project'); setActiveMenu(this)">Project ⚙</button>
             <button class="btn-3d" onclick="showPage('about'); setActiveMenu(this)">About ℹ</button>
             <button class="btn-3d" onclick="showPage('Sample'); setActiveMenu(this)">Sample🧩</button>
+            <button class="btn-3d" onclick="showPage('hire-card'); setActiveMenu(this)">Hire Me🧩</button>
             <button id="darkModeBtn" class="dark-btn">
                 <span> Dark mode</span>
                 <i class="fa-solid fa-moon"></i>
@@ -236,7 +237,24 @@
                 </div>
 
             </div>
+            <div class="hire-card">
+            <h2>Hire Me</h2>
 
+            <form id="hireForm" class="hire-form">
+                <input type="text" id="hireName" placeholder="Your Name" required>
+                <input type="email" id="hireEmail" placeholder="Your Email" required>
+                <input type="text" id="hireSubject" placeholder="Project Subject" required>
+                <textarea id="hireMessage" placeholder="Write your message..." rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="hireStatus"></div>
+            </div>
+
+                <!-- EmailJS CDN -->
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                <!-- JS kamu -->
+                <script src="script.js"></script>
         </section>
 
     </div>
