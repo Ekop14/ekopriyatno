@@ -155,7 +155,7 @@ overflow: hidden;
     width: 220px;
     height: auto;
     background: #1e293b;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 15px;
