@@ -943,110 +943,301 @@ button{
 /* =========================
    MOBILE (tetap sidebar kiri)
 ========================= */
-@media (max-width:768px){
+/* =========================
+   GLOBAL FIX
+========================= */
+* {
+    box-sizing: border-box;
+}
 
-    .main{
-        display:flex;
-        flex-direction:row;   /* tetap kesamping */
-        gap:12px;
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 220px;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.sidebar .btn-3d,
+.sidebar .dark-btn {
+    width: 100%;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 30px;
+    overflow: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo,
+.header-left img {
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.typing-container {
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+/* =========================
+   FLOAT ICON / FAB
+========================= */
+.fab-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* kalau sebelumnya fixed, override */
+.fab-container.mobile-safe {
+    position: static;
+}
+
+/* =========================
+   CARD UNIVERSAL
+========================= */
+.card,
+.clean-card,
+.hire-card,
+.about-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   FORM FIX
+========================= */
+.clean-card form,
+.hire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+/* row input */
+.input-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+/* input */
+input,
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+/* textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* button */
+button,
+.send-btn {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    margin-top: 8px;
+    align-self: center;
+}
+
+/* =========================
+   ABOUT CARD
+========================= */
+.about-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
     }
 
-    /* sidebar makin slim */
-    .sidebar{
-        width:110px;
-        min-width:110px;
-        padding:8px;
+    /* layout vertical */
+    .main {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    /* tombol navbar kecil */
-    .sidebar .btn-3d,
-    .sidebar .dark-btn{
-        padding:10px 8px;
-        font-size:13px;
-        border-radius:10px;
-        margin-bottom:8px;
+    /* sidebar pindah atas */
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
-    /* icon dalam tombol */
-    .sidebar i{
-        font-size:12px;
+    .btn-3d,
+    .dark-btn {
+        width: 100%;
     }
 
-    /* content lebih lega */
-    .content{
-        padding:12px;
+    /* content */
+    .content {
+        width: 100%;
+        padding: 15px;
     }
 
-    /* header rapih */
-    .header{
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-        gap:12px;
+    /* header */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
 
-    .header-left{
-        flex-direction:column;
+    .header-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .logo,
-    .header-left img{
-        width:80px;
-        height:80px;
+    .header-left img {
+        width: 100px;
+        height: 100px;
     }
 
-    .typing-container{
-        font-size:24px;
+    .typing-container {
+        font-size: 24px;
+        line-height: 1.3;
     }
 
-    /* card */
+    /* fab icon */
+    .fab-container {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        position: static !important;
+    }
+
+    /* cards */
     .card,
     .clean-card,
-    .hire-card{
-        padding:16px;
-        margin:12px 0;
+    .hire-card,
+    .about-card {
+        padding: 18px;
+        margin: 15px 0;
     }
 
-    /* form */
-    .input-row{
-        grid-template-columns:1fr;
+    /* about */
+    .about-card {
+        flex-direction: column;
+        text-align: center;
     }
 
-    textarea{
-        min-height:100px;
+    /* form mobile */
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        min-height: 100px;
     }
 
     button,
-    .send-btn{
-        max-width:100%;
-    }
-
-    body{
-        overflow-x:hidden;
+    .send-btn {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
 /* =========================
-   EXTRA SMALL PHONE
+   SMALL PHONE
 ========================= */
-@media (max-width:480px){
+@media (max-width: 480px) {
 
-    .sidebar{
-        width:90px;
-        min-width:90px;
+    .sidebar {
+        grid-template-columns: 1fr;
     }
 
-    .sidebar .btn-3d,
-    .sidebar .dark-btn{
-        font-size:12px;
-        padding:8px 6px;
+    .typing-container {
+        font-size: 20px;
     }
 
-    .typing-container{
-        font-size:20px;
+    .content {
+        padding: 12px;
     }
 
-    .content{
-        padding:10px;
+    input,
+    textarea {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .card,
+    .clean-card,
+    .hire-card {
+        padding: 14px;
+        border-radius: 16px;
     }
 }
