@@ -238,19 +238,36 @@
 
             </div>
             <!-- HIRE ME -->
+        <!-- HIRE ME -->
 <div class="page" id="hireform">
-    <div class="hire-card">
-        <h2>Hire Me</h2>
+    <div class="card hire-card">
+
+        <div class="hire-header">
+            <span class="status-badge">🟢 Open to Work</span>
+            <h2>Hire Me</h2>
+            <p>Available for freelance, collaboration, and frontend projects.</p>
+        </div>
 
         <form id="hireForm" class="hire-form">
-            <input type="text" id="hireName" placeholder="Your Name" required>
-            <input type="email" id="hireEmail" placeholder="Your Email" required>
+
+            <div class="input-row">
+                <input type="text" id="hireName" placeholder="Your Name" required>
+                <input type="email" id="hireEmail" placeholder="Your Email" required>
+            </div>
+
             <input type="text" id="hireSubject" placeholder="Project Subject" required>
-            <textarea id="hireMessage" placeholder="Write your message..." rows="5" required></textarea>
+
+            <textarea id="hireMessage"
+                placeholder="Write your message..."
+                rows="5"
+                required></textarea>
+
             <button type="submit">Send Message</button>
+
         </form>
 
         <div id="hireStatus"></div>
+
     </div>
 </div>
                 <!-- EmailJS CDN -->
