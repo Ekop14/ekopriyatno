@@ -157,7 +157,8 @@ overflow: hidden;
     background: #1e293b;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 6px;
+    
 }
 
 /* BUTTON SIDEBAR */
@@ -169,6 +170,7 @@ overflow: hidden;
     cursor: pointer;
     border-radius: 8px;
     transition: 0.2s;
+    margin:0;              /* hapus margin bawah */
 }
 
 .sidebar button:hover {
