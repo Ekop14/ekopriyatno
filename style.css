@@ -795,47 +795,67 @@ background:rgba(255,255,255,0.1);
         font-size:16px;
         line-height:1.6;
     }
-}
 .hire-card {
-    background: linear-gradient(135deg, #ffffff, #f4f7fb);
-    padding: 25px;
+    background: #f8f9fb;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-top: 25px;
-    text-align: center;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
 }
 
 .hire-card h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #111;
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .hire-form {
     display: flex;
     flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
 
 .hire-form input,
 .hire-form textarea {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #ddd;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
     border-radius: 12px;
+    font-size: 15px;
     outline: none;
-    font-size: 14px;
-    font-family: Segoe UI, sans-serif;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.hire-form input:focus,
+.hire-form textarea:focus {
+    border-color: #3b82f6;
+}
+
+.hire-form textarea {
+    resize: none;
+    min-height: 140px;
 }
 
 .hire-form button {
-    background: #111;
+    width: 100%;
+    background: #3b82f6;
     color: white;
     border: none;
-    padding: 14px;
+    padding: 15px;
     border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    font-weight: 600;
     transition: 0.3s ease;
 }
 
@@ -845,6 +865,21 @@ background:rgba(255,255,255,0.1);
 
 #hireStatus {
     margin-top: 15px;
-    font-size: 14px;
     font-weight: 600;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hire-card {
+        padding: 20px;
+    }
+
+    .hire-card h2 {
+        font-size: 26px;
+    }
 }
