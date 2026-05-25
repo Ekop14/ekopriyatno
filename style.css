@@ -796,3 +796,55 @@ background:rgba(255,255,255,0.1);
         line-height:1.6;
     }
 }
+.hire-card {
+    background: linear-gradient(135deg, #ffffff, #f4f7fb);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-top: 25px;
+    text-align: center;
+}
+
+.hire-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #111;
+}
+
+.hire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hire-form input,
+.hire-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    font-family: Segoe UI, sans-serif;
+}
+
+.hire-form button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hire-form button:hover {
+    transform: translateY(-2px);
+}
+
+#hireStatus {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
