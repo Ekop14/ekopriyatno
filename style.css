@@ -795,91 +795,154 @@ background:rgba(255,255,255,0.1);
         font-size:16px;
         line-height:1.6;
     }
-.hire-card {
-    background: #f8f9fb;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin: 40px auto;
-    width: 90%;
-    max-width: 1000px;
-}
-
-.hire-card h2 {
-    font-size: 32px;
-    color: #1f2937;
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-.hire-form {
+/* ======================
+   FORM RESPONSIVE
+====================== */
+#hireForm {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
-.form-row {
+/* row input */
+.input-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
-.hire-form input,
-.hire-form textarea {
+/* input */
+#hireForm input {
     width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 12px;
-    font-size: 15px;
-    outline: none;
+    height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    font-size: 14px;
     box-sizing: border-box;
-    transition: 0.3s ease;
 }
 
-.hire-form input:focus,
-.hire-form textarea:focus {
-    border-color: #3b82f6;
-}
-
-.hire-form textarea {
-    resize: none;
-    min-height: 140px;
-}
-
-.hire-form button {
+/* textarea */
+#hireForm textarea {
     width: 100%;
-    background: #3b82f6;
-    color: white;
+    min-height: 130px;
+    padding: 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* button */
+#hireForm button {
+    width: 180px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    align-self: flex-start;
     border: none;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 700;
     cursor: pointer;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
     transition: 0.3s ease;
 }
 
-.hire-form button:hover {
+#hireForm button:hover {
     transform: translateY(-2px);
 }
 
-#hireStatus {
-    margin-top: 15px;
-    font-weight: 600;
-    text-align: center;
+/* ======================
+   TABLET
+====================== */
+@media (max-width: 992px) {
+    .hire-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hire-info,
+    .hire-form-card {
+        width: 100%;
+    }
 }
 
-/* Mobile */
+/* ======================
+   MOBILE
+====================== */
 @media (max-width: 768px) {
-    .form-row {
+
+    /* card padding */
+    .hire-info,
+    .hire-form-card {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    /* judul */
+    .hire-info h2 {
+        font-size: 32px;
+    }
+
+    .hire-form-card h3 {
+        font-size: 22px;
+    }
+
+    /* input jadi stack */
+    .input-row {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
-    .hire-card {
-        padding: 20px;
+    /* font & size */
+    #hireForm input {
+        height: 44px;
+        font-size: 13px;
+        padding: 10px 12px;
     }
 
-    .hire-card h2 {
-        font-size: 26px;
+    #hireForm textarea {
+        min-height: 110px;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    /* button full width */
+    #hireForm button {
+        width: 100%;
+        align-self: stretch;
+        font-size: 14px;
+        padding: 13px;
+    }
+
+    .contact-item {
+        padding: 12px 14px;
+    }
+
+    .contact-item span {
+        font-size: 14px;
+    }
+}
+
+/* ======================
+   SMALL MOBILE
+====================== */
+@media (max-width: 480px) {
+    .hire-section {
+        padding: 50px 14px;
+    }
+
+    .hire-info h2 {
+        font-size: 28px;
+    }
+
+    .status-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #hireForm {
+        gap: 12px;
     }
 }
